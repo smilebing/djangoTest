@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+    <div>
+
+        {% if blogList %}
+            <ul>
+                {% for blog in blogList %}
+                    <li><a>{{ blog.title }}</a></li>
+                    <div>{{ blog.content }}</div>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No blog are available.</p>
+        {% endif %}
+    </div>
+    <button class="btn btn-default">waht</button>
+{% endblock %}
